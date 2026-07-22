@@ -1,0 +1,498 @@
+:root {
+  /* ===== Palet Merah Putih (PMI) ===== */
+  --red-950: #4a0a13;   /* merah paling tua, untuk bayangan/border gelap */
+  --red-900: #6e0e1b;   /* merah tua utama - warna latar akhir setelah scroll */
+  --red-800: #7f0f1e;
+  --red-700: #8f1522;   /* merah tua sekunder untuk teks/aksen di atas putih */
+  --red-600: #a8172a;   /* merah aksen sedikit lebih terang, untuk garis/ikon */
+  --white: #ffffff;
+  --cream: #fdf9f7;     /* putih hangat, dipakai di kartu QR */
+  --ink-900: #241412;   /* nyaris hitam kemerahan, untuk teks gelap */
+  --gray-500: #7a6b68;  /* teks sekunder di atas putih/kartu */
+  --line-200: #ece3e1;  /* garis pemisah tipis di atas kartu putih */
+
+  --font-display: var(--font-display), serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--red-950);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  .app-frame adalah SATU latar untuk seluruh halaman (bukan per-section).
+  Warnanya di-set lewat JS oleh PageShell.jsx: mulai putih, lalu berubah
+  perlahan ke merah tua mengikuti scroll dari hero menuju gallery, dan
+  tetap merah tua untuk section sesudahnya. Nilai background di bawah ini
+  cuma fallback (state awal sebelum JS jalan / saat prefers-reduced-motion).
+*/
+.app-frame {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: var(--white);
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ================= SECTION 1: HERO (di atas latar putih) ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  color: var(--ink-900);
+  padding: 28px 26px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-eyebrow {
+  color: var(--red-700);
+}
+
+.hero-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.hero-invite {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.hero-invite em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--red-800);
+}
+
+.logo-mark {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 1.5px solid var(--red-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: var(--red-800);
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cta-primary {
+  background: var(--red-900);
+  color: var(--white);
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px 22px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.cta-primary:hover {
+  background: var(--red-700);
+}
+.cta-primary:active {
+  transform: scale(0.98);
+}
+.cta-primary:focus-visible {
+  outline: 2px solid var(--red-900);
+  outline-offset: 3px;
+}
+
+.hero-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gray-500);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.scroll-cue {
+  width: 1px;
+  height: 18px;
+  background: var(--gray-500);
+  animation: pulse-line 1.8s ease-in-out infinite;
+}
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.3;
+    height: 14px;
+  }
+  50% {
+    opacity: 1;
+    height: 22px;
+  }
+}
+
+/* ================= SECTION 2: GALLERY (latar sudah merah tua) ================= */
+.gallery {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 0;
+}
+
+.gallery-stage {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+}
+
+/* Foto besar sedikit miring, ditumpuk 3 baris di kiri & kanan, sedikit
+   "bleed" keluar tepi layar (dipotong otomatis oleh overflow-x:hidden
+   di .app-frame). Rotasi final di-set lewat GSAP (lihat Gallery.jsx),
+   bukan lewat CSS transform, supaya tidak bentrok dengan animasi geser. */
+.g-photo {
+  position: absolute;
+  width: 168px;
+  height: 124px;
+  padding: 5px;
+  background: var(--white);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+
+.g-photo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tiga variasi bentuk sedikit tidak beraturan, biar terkesan foto asli
+   yang ditempel, bukan kotak sempurna. */
+.shape-a {
+  clip-path: polygon(3% 0%, 100% 4%, 97% 100%, 0% 96%);
+}
+.shape-b {
+  clip-path: polygon(0% 3%, 96% 0%, 100% 97%, 4% 100%);
+}
+.shape-c {
+  clip-path: polygon(2% 0%, 98% 2%, 100% 98%, 0% 100%);
+}
+
+.gallery-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  text-align: center;
+  z-index: 5;
+}
+
+.gallery-headline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.gallery-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= SECTION 3: KEUNGGULAN (latar tetap merah tua) ================= */
+.features {
+  color: var(--white);
+  padding: 64px 26px 60px;
+}
+
+.features-head .eyebrow {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.features-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 20ch;
+}
+
+.features-sub {
+  margin-top: 12px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  max-width: 34ch;
+}
+
+.feature-list {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-item {
+  display: flex;
+  gap: 16px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.feature-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.feature-body h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.feature-body p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ================= SECTION 4: JOIN / QR (latar tetap merah tua) ================= */
+.join {
+  color: var(--white);
+  padding: 64px 26px 70px;
+}
+
+.join-head .eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+
+.join-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.15;
+  max-width: 18ch;
+}
+
+.join-sub {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 34ch;
+}
+
+.tag-stack {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Kartu QR sengaja tetap putih - seperti tag/tiket fisik yang mengambang
+   di atas latar merah, biar QR code (yang butuh kontras tinggi) tetap
+   gampang di-scan. */
+.tag-card {
+  background: var(--white);
+  border: 1px solid var(--line-200);
+  border-radius: 4px;
+  padding: 22px 22px 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.tag-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--red-700);
+}
+
+.tag-punch {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--red-900);
+}
+.tag-punch::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--cream);
+}
+
+.tag-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-700);
+  font-weight: 600;
+}
+
+.tag-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: var(--red-900);
+  padding-right: 26px;
+}
+
+.tag-desc {
+  font-size: 12.5px;
+  color: var(--gray-500);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.qr-box {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.qr-box img {
+  width: 96px;
+  height: 96px;
+  border: 1px solid var(--line-200);
+  border-radius: 2px;
+  background: #fff;
+}
+
+.qr-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.qr-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--red-900);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 10px 14px;
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s ease;
+}
+.qr-link-btn:hover {
+  background: var(--red-700);
+}
+
+.qr-code-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #a89b98;
+  letter-spacing: 0.06em;
+}
+
+.footer-note {
+  margin-top: 40px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
