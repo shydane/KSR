@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 import gsap from "gsap";
 
 export default function Hero() {
@@ -15,7 +16,7 @@ export default function Hero() {
         .from(".logo-mark", { opacity: 0, scale: 0.85, duration: 0.6 }, "-=0.3")
         .from(".hero-bottom", { opacity: 0, y: 14, duration: 0.6 }, "-=0.25");
     },
-    { scope: container }
+    { scope: container },
   );
 
   const handleScrollToGallery = (e) => {
@@ -37,14 +38,21 @@ export default function Hero() {
         </h1>
 
         <div className="logo-mark">
-          {/* Ganti dengan <Image src="/logo-ksr.png" alt="Logo KSR" width={104} height={104} />
-              kalau file logo asli sudah ada di folder public/ */}
-          <span>KSR</span>
+          <Image
+            src="/gallery/logoksr2-removebg.png"
+            alt="Logo KSR"
+            width={114}
+            height={114}
+          />
         </div>
       </div>
 
       <div className="hero-bottom">
-        <a href="#gallery" className="cta-primary" onClick={handleScrollToGallery}>
+        <a
+          href="#gallery"
+          className="cta-primary"
+          onClick={handleScrollToGallery}
+        >
           <span>Lihat Kegiatan Kami</span>
           <span>&darr;</span>
         </a>

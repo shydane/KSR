@@ -10,14 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   {
     title: "Pelatihan Bersertifikat",
-    desc: "Pertolongan pertama, evakuasi, dan manajemen bencana dari instruktur berpengalaman.",
+    desc: "Pertolongan pertama, evakuasi, dan manajemen bencana.",
     icon: (
       <path d="M12 21s-7-4.6-9.3-9.1C1.2 8.4 3 5 6.4 5c1.9 0 3.2 1 4.1 2.2C11.4 6 12.7 5 14.6 5 18 5 19.8 8.4 18.3 11.9 16 16.4 12 21 12 21z" />
     ),
   },
   {
     title: "Relasi Lintas Angkatan",
-    desc: "Terhubung dengan senior dan alumni yang tersebar di berbagai bidang dan instansi.",
+    desc: "Terhubung dengan senior dan alumni yang tersebar di berbagai bidang.",
     icon: (
       <>
         <circle cx="9" cy="8" r="3" />
@@ -34,7 +34,7 @@ const features = [
   },
   {
     title: "Pengalaman Nyata",
-    desc: "Turun langsung dalam bakti sosial, siaga bencana, dan kegiatan kampus berskala besar.",
+    desc: "Turun langsung dalam bakti sosial, siaga bencana, dan kegiatan kampus.",
     icon: (
       <path d="M12 3l2.6 5.4 6 .8-4.3 4.1 1 5.9L12 16.9 6.7 19.2l1-5.9L3.4 9.2l6-.8L12 3z" />
     ),
@@ -76,8 +76,8 @@ export default function Features() {
   return (
     <section ref={container} className="features">
       <div className="features-head">
-        <div className="eyebrow">Mengapa KSR</div>
-        <h2 className="features-title">Empat alasan bergabung bersama kami.</h2>
+        <div className="eyebrow">Mengapa KSR?</div>
+        <h2 className="features-title">Alasan bergabung bersama kami.</h2>
         <p className="features-sub">
           Bukan sekadar organisasi, tapi ruang belajar keterampilan yang terpakai
           seumur hidup.

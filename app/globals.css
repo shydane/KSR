@@ -1,15 +1,15 @@
 :root {
   /* ===== Palet Merah Putih (PMI) ===== */
-  --red-950: #4a0a13;   /* merah paling tua, untuk bayangan/border gelap */
-  --red-900: #6e0e1b;   /* merah tua utama - warna latar akhir setelah scroll */
+  --red-950: #4a0a13; /* merah paling tua, untuk bayangan/border gelap */
+  --red-900: #6e0e1b; /* merah tua utama - warna latar akhir setelah scroll */
   --red-800: #7f0f1e;
-  --red-700: #8f1522;   /* merah tua sekunder untuk teks/aksen di atas putih */
-  --red-600: #a8172a;   /* merah aksen sedikit lebih terang, untuk garis/ikon */
+  --red-700: #8f1522; /* merah tua sekunder untuk teks/aksen di atas putih */
+  --red-600: #a8172a; /* merah aksen sedikit lebih terang, untuk garis/ikon */
   --white: #ffffff;
-  --cream: #fdf9f7;     /* putih hangat, dipakai di kartu QR */
-  --ink-900: #241412;   /* nyaris hitam kemerahan, untuk teks gelap */
-  --gray-500: #7a6b68;  /* teks sekunder di atas putih/kartu */
-  --line-200: #ece3e1;  /* garis pemisah tipis di atas kartu putih */
+  --cream: #fdf9f7; /* putih hangat, dipakai di kartu QR */
+  --ink-900: #241412; /* nyaris hitam kemerahan, untuk teks gelap */
+  --gray-500: #7a6b68; /* teks sekunder di atas putih/kartu */
+  --line-200: #ece3e1; /* garis pemisah tipis di atas kartu putih */
 
   --font-display: var(--font-display), serif;
   --font-body: var(--font-body), sans-serif;
@@ -110,7 +110,7 @@ svg {
   color: var(--red-800);
 }
 
-.logo-mark {
+/* .logo-mark {
   width: 104px;
   height: 104px;
   border-radius: 50%;
@@ -123,7 +123,7 @@ svg {
   font-size: 20px;
   letter-spacing: 0.02em;
   color: var(--red-800);
-}
+} */
 
 .hero-bottom {
   display: flex;
@@ -145,7 +145,9 @@ svg {
   justify-content: space-between;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
 }
 .cta-primary:hover {
   background: var(--red-700);
@@ -495,4 +497,88 @@ svg {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ================= SECTION: FAQ (latar tetap merah tua) ================= */
+.faq {
+  color: var(--white);
+  padding: 64px 26px 60px;
+}
+
+.faq-head .eyebrow {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.faq-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 18ch;
+}
+
+.faq-sub {
+  margin-top: 12px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  max-width: 34ch;
+}
+
+.faq-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-answer {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.faq-answer p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 20px;
+  padding-right: 40px;
 }

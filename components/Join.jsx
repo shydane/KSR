@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // GANTI dua link di bawah ini dengan link grup & form pendaftaran asli kamu.
 const GROUP_LINK = "https://chat.whatsapp.com/GANTI-LINK-GRUP-KSR";
-const FORM_LINK = "https://forms.gle/GANTI-LINK-FORM-KSR";
+const FORM_LINK = "https://ukmksrpmipolije.my.id/rekrutment";
 
 function qrUrl(data) {
   return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=8&color=110-16-27&data=${encodeURIComponent(
-    data
+    data,
   )}`;
 }
 
@@ -59,7 +59,7 @@ export default function Join() {
         },
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
@@ -68,8 +68,8 @@ export default function Join() {
         <div className="eyebrow">Langkah Selanjutnya</div>
         <h2 className="join-title">Scan &amp; mulai perjalananmu.</h2>
         <p className="join-sub">
-          Pindai salah satu kode di bawah untuk gabung grup diskusi atau langsung
-          isi formulir pendaftaran.
+          Pindai salah satu kode di bawah untuk gabung grup diskusi atau
+          langsung isi formulir pendaftaran.
         </p>
       </div>
 
@@ -79,14 +79,24 @@ export default function Join() {
           <div className="tag-eyebrow">Tag 01 · Komunitas</div>
           <div className="tag-title">Grup Calon Anggota</div>
           <p className="tag-desc">
-            Berisi info jadwal open recruitment, Q&amp;A, dan pengumuman terbaru.
+            Berisi info jadwal open recruitment, Q&amp;A, dan pengumuman
+            terbaru.
           </p>
           <div className="qr-box">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={qrUrl(GROUP_LINK)} alt="QR Code Grup Calon Anggota KSR" loading="lazy" />
+            <img
+              src={qrUrl(GROUP_LINK)}
+              alt="QR Code Grup Calon Anggota KSR"
+              loading="lazy"
+            />
             <div className="qr-meta">
-              <span className="qr-code-label">GANTI LINK DI GROUP_LINK</span>
-              <a href={GROUP_LINK} className="qr-link-btn" target="_blank" rel="noopener noreferrer">
+              <span className="qr-code-label">Silahkan bergabung disini</span>
+              <a
+                href={GROUP_LINK}
+                className="qr-link-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Buka Grup &rarr;
               </a>
             </div>
@@ -98,14 +108,24 @@ export default function Join() {
           <div className="tag-eyebrow">Tag 02 · Pendaftaran</div>
           <div className="tag-title">Form Pendaftaran</div>
           <p className="tag-desc">
-            Isi biodata singkat, kami akan menghubungimu untuk tahap berikutnya.
+            Isi biodata singkat tentang dirimu untuk pendaftaran resmi ke KSR.
+            Pastikan data yang diisi valid dan dapat dipertanggungjawabkan.
           </p>
           <div className="qr-box">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={qrUrl(FORM_LINK)} alt="QR Code Form Pendaftaran KSR" loading="lazy" />
+            <img
+              src={qrUrl(FORM_LINK)}
+              alt="QR Code Form Pendaftaran KSR"
+              loading="lazy"
+            />
             <div className="qr-meta">
-              <span className="qr-code-label">GANTI LINK DI FORM_LINK</span>
-              <a href={FORM_LINK} className="qr-link-btn" target="_blank" rel="noopener noreferrer">
+              <span className="qr-code-label">Silahkan daftar disini</span>
+              <a
+                href={FORM_LINK}
+                className="qr-link-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Isi Form &rarr;
               </a>
             </div>
@@ -113,7 +133,9 @@ export default function Join() {
         </div>
       </div>
 
-      <div className="footer-note">KSR — KORPS SUKARELA · SIAP SEDIA SIAP BERBAKTI</div>
+      <div className="footer-note">
+        KSR — KORPS SUKARELA · SIAP SEDIA SIAP BERBAKTI
+      </div>
     </section>
   );
 }
