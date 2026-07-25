@@ -108,7 +108,7 @@ const rightPhotos = [
     edge: -24,
     rotate: -8,
     shape: "shape-b",
-    src: "",
+    src: "/gallery/delupa.jpg",
     alt: "",
   },
 ];
