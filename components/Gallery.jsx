@@ -161,6 +161,26 @@ export default function Gallery() {
         .from(".g-photo-right", { x: 140, opacity: 0, stagger: 0.12 }, "<")
         .from(".gallery-headline", { opacity: 0, y: 12 }, "<0.15")
         .from(".gallery-caption", { opacity: 0, y: 10 }, "<0.1");
+      gsap.to(".g-photo-left", {
+        yPercent: -14,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".gallery-stage",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      gsap.to(".g-photo-right", {
+        yPercent: 14,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".gallery-stage",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
     },
     { scope: container },
   );
