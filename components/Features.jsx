@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: "Relasi Lintas Angkatan",
-    desc: "Terhubung dengan senior dan alumni yang tersebar di berbagai bidang dan instansi.",
+    desc: "Terhubung dengan senior dan alumni yang tersebar di berbagai bidang.",
     icon: (
       <>
         <circle cx="9" cy="8" r="3" />
@@ -28,13 +28,13 @@ const features = [
     ),
   },
   {
-    title: "Poin Kegiatan & SKPI",
-    desc: "Setiap penugasan lapangan tercatat dan mendukung portofolio non-akademikmu.",
+    title: "Kesempatan Jadi Panitia",
+    desc: "Terlibat langsung sebagai panitia di berbagai kegiatan, belajar manajemen acara secara langsung.",
     icon: <path d="M4 12l5 5L20 6" />,
   },
   {
     title: "Pengalaman Nyata",
-    desc: "Turun langsung dalam bakti sosial, siaga bencana, dan kegiatan kampus berskala besar.",
+    desc: "Turun langsung dalam bakti sosial, siaga bencana, dan kegiatan kampus.",
     icon: (
       <path d="M12 3l2.6 5.4 6 .8-4.3 4.1 1 5.9L12 16.9 6.7 19.2l1-5.9L3.4 9.2l6-.8L12 3z" />
     ),
@@ -75,17 +75,17 @@ export default function Features() {
         },
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
     <section ref={container} className="features">
       <div className="features-head">
         <div className="eyebrow">Mengapa KSR</div>
-        <h2 className="features-title">Empat alasan bergabung bersama kami.</h2>
+        <h2 className="features-title">Alasan bergabung bersama kami.</h2>
         <p className="features-sub">
-          Bukan sekadar organisasi, tapi ruang belajar keterampilan yang terpakai
-          seumur hidup.
+          Bukan sekadar organisasi, tapi ruang belajar keterampilan yang
+          terpakai seumur hidup.
         </p>
       </div>
 

@@ -168,6 +168,16 @@ svg {
   gap: 8px;
 }
 
+.hero-desc {
+  font-family: var(--font-desc);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gray-500);
+  max-width: 30ch;
+  margin: 0;
+}
+
 .scroll-cue {
   width: 1px;
   height: 18px;

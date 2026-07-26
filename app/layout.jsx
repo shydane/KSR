@@ -1,4 +1,9 @@
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import {
+  Fraunces,
+  Inter,
+  IBM_Plex_Mono,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import PageShell from "@/components/PageShell";
 import "./globals.css";
 
@@ -7,6 +12,13 @@ const fraunces = Fraunces({
   weight: ["400", "600", "700", "900"],
   style: ["normal", "italic"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-desc",
   display: "swap",
 });
 
@@ -38,7 +50,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
+      <body
+        className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} ${jakarta.variable}`}
+      >
         <PageShell>{children}</PageShell>
       </body>
     </html>

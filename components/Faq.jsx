@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const faqs = [
   {
     q: "Siapa saja yang boleh mendaftar jadi anggota KSR?",
-    a: "Seluruh mahasiswa aktif boleh mendaftar, tanpa syarat jurusan atau angkatan tertentu. Yang penting punya niat belajar dan mau berkomitmen mengikuti pelatihan dasar.",
+    a: "Seluruh mahasiswa aktif semester 1-3, tanpa syarat jurusan tertentu. Yang penting punya niat belajar dan mau berkomitmen mengikuti pelatihan dasar.",
   },
   {
     q: "Apakah ada biaya pendaftaran?",

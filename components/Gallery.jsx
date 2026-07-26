@@ -72,6 +72,24 @@ const leftPhotos = [
     src: "/gallery/delegasi4.jpg",
     alt: "",
   },
+  {
+    id: "l5",
+    top: 660,
+    edge: -50,
+    rotate: -7,
+    shape: "shape-b",
+    // src: "/gallery/delegasi8.jpg",
+    alt: "",
+  },
+  {
+    id: "l6",
+    top: 825,
+    edge: -26,
+    rotate: 9,
+    shape: "shape-c",
+    // src: "/gallery/delegasi9.jpg",
+    alt: "",
+  },
 ];
 
 const rightPhotos = [
@@ -109,6 +127,24 @@ const rightPhotos = [
     rotate: -8,
     shape: "shape-b",
     src: "/gallery/delupa.jpg",
+    alt: "",
+  },
+  {
+    id: "r5",
+    top: 700,
+    edge: -54,
+    rotate: -9,
+    shape: "shape-a",
+    // src: "/gallery/delegasi10.jpg",
+    alt: "",
+  },
+  {
+    id: "r6",
+    top: 865,
+    edge: -24,
+    rotate: 7,
+    shape: "shape-c",
+    // src: "/gallery/delegasi11.jpg",
     alt: "",
   },
 ];
@@ -198,9 +234,7 @@ export default function Gallery() {
 
         <div className="gallery-center">
           <div className="gallery-headline">Our Gallery</div>
-          <p className="gallery-caption">
-            Momen dari setiap penugasan lapangan kami.
-          </p>
+          <p className="gallery-caption">Momen dari setiap kegiatan kami.</p>
         </div>
       </div>
     </section>

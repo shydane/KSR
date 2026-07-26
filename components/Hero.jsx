@@ -45,6 +45,11 @@ export default function Hero() {
             height={114}
           />
         </div>
+
+        <h3 className="hero-desc">
+          KSR PMI Unit POLIJE merupakan salah satu UKM di Politeknik Negeri
+          Jember yang bergerak di bidang kemanusiaan dan kepalangmerahan.
+        </h3>
       </div>
 
       <div className="hero-bottom">
