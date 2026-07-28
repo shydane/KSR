@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   {
     title: "Pelatihan Bersertifikat",
-    desc: "Pertolongan pertama, evakuasi, dan manajemen bencana dari instruktur berpengalaman.",
+    desc: "Pertolongan pertama, evakuasi, dan manajemen bencana.",
     icon: (
       <path d="M12 21s-7-4.6-9.3-9.1C1.2 8.4 3 5 6.4 5c1.9 0 3.2 1 4.1 2.2C11.4 6 12.7 5 14.6 5 18 5 19.8 8.4 18.3 11.9 16 16.4 12 21 12 21z" />
     ),

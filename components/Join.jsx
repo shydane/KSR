@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // GANTI dua link di bawah ini dengan link grup & form pendaftaran asli kamu.
-const GROUP_LINK = "https://chat.whatsapp.com/GANTI-LINK-GRUP-KSR";
 const FORM_LINK = "https://ukmksrpmipolije.my.id/rekrutment";
 
 function qrUrl(data) {
@@ -76,36 +75,7 @@ export default function Join() {
       <div className="tag-stack">
         <div className="tag-card tag-item">
           <div className="tag-punch" />
-          <div className="tag-eyebrow">Tag 01 · Komunitas</div>
-          <div className="tag-title">Grup Calon Anggota</div>
-          <p className="tag-desc">
-            Berisi info jadwal open recruitment, Q&amp;A, dan pengumuman
-            terbaru.
-          </p>
-          <div className="qr-box">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={qrUrl(GROUP_LINK)}
-              alt="QR Code Grup Calon Anggota KSR"
-              loading="lazy"
-            />
-            <div className="qr-meta">
-              <span className="qr-code-label">Silahkan bergabung disini</span>
-              <a
-                href={GROUP_LINK}
-                className="qr-link-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buka Grup &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="tag-card tag-item">
-          <div className="tag-punch" />
-          <div className="tag-eyebrow">Tag 02 · Pendaftaran</div>
+          <div className="tag-eyebrow">Tag 01 · Pendaftaran</div>
           <div className="tag-title">Form Pendaftaran</div>
           <p className="tag-desc">
             Isi biodata singkat tentang dirimu untuk pendaftaran resmi ke KSR.

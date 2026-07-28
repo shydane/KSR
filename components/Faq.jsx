@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     q: "Apakah ada biaya pendaftaran?",
-    a: "Tidak ada biaya pendaftaran. Seluruh proses seleksi dan pelatihan dasar ditanggung oleh organisasi.",
+    a: "Tidak ada biaya untuk pendaftaran atau seleksi anggota baru.",
   },
   {
     q: "Bagaimana alur seleksinya?",
-    a: "Setelah mengisi form pendaftaran, kamu akan dihubungi lewat grup untuk info jadwal wawancara singkat dan pelatihan dasar sebelum resmi dilantik jadi anggota.",
+    a: "Setelah mengisi form pendaftaran, kamu akan diminta masuk  grup untuk info jadwal wawancara singkat dan pelatihan dasar sebelum resmi dilantik jadi anggota.",
   },
   {
     q: "Apakah kegiatan KSR mengganggu jadwal kuliah?",
