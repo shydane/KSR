@@ -610,3 +610,76 @@ svg {
 .tag-card:active {
   transform: perspective(900px) rotateX(3deg) scale(0.985);
 }
+
+/* ================= SECTION: PAMFLET (latar tetap merah tua) ================= */
+.pamflet {
+  color: var(--white);
+  padding: 64px 26px 60px;
+  text-align: center;
+}
+
+.pamflet-head .eyebrow {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.pamflet-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.pamflet-sub {
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  max-width: 30ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pamflet-frame {
+  margin: 32px auto 0;
+  max-width: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--white);
+  padding: 8px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.pamflet-frame img {
+  display: block;
+  border-radius: 2px;
+}
+
+.pamflet-actions {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.pamflet-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  color: var(--red-900);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 13px 22px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+.pamflet-download:hover {
+  background: var(--cream);
+}
+.pamflet-download:active {
+  transform: perspective(600px) rotateX(8deg) scale(0.97);
+}
