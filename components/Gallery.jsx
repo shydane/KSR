@@ -43,7 +43,7 @@ const leftPhotos = [
     rotate: -9,
     shape: "shape-a",
     src: "/gallery/delegasi.jpg",
-    alt: "",
+    alt: "Delegasi Himaster CUP POLIJE",
   },
   {
     id: "l2",
@@ -52,7 +52,7 @@ const leftPhotos = [
     rotate: 6,
     shape: "shape-b",
     src: "/gallery/delegasi2.jpg",
-    alt: "",
+    alt: "Delegasi Badminton CUP Jurusan peternakan POLIJE",
   },
   {
     id: "l3",
@@ -61,7 +61,7 @@ const leftPhotos = [
     rotate: -6,
     shape: "shape-c",
     src: "/gallery/delegasi3.jpg",
-    alt: "",
+    alt: "Pelatihan gabungan bersama PMI Kab Jember",
   },
   {
     id: "l4",
@@ -70,7 +70,7 @@ const leftPhotos = [
     rotate: 8,
     shape: "shape-a",
     src: "/gallery/delegasi4.jpg",
-    alt: "",
+    alt: "Kepanitiaan donor darah ke-2 dan seminar",
   },
   {
     id: "l5",
@@ -79,7 +79,7 @@ const leftPhotos = [
     rotate: -7,
     shape: "shape-b",
     src: "/gallery/delegasi9.jpg",
-    alt: "",
+    alt: "Pelatihan gabungan bersama PMI Kab Jember",
   },
 ];
 
@@ -91,7 +91,7 @@ const rightPhotos = [
     rotate: 8,
     shape: "shape-b",
     src: "/gallery/delegasi5.jpg",
-    alt: "",
+    alt: "Delegasi study outside BEM POLIJE",
   },
   {
     id: "r2",
@@ -100,7 +100,7 @@ const rightPhotos = [
     rotate: -7,
     shape: "shape-c",
     src: "/gallery/delegasi6.jpg",
-    alt: "",
+    alt: "Penyegaran rutin KSR PMI POLIJE",
   },
   {
     id: "r3",
@@ -109,7 +109,7 @@ const rightPhotos = [
     rotate: 9,
     shape: "shape-a",
     src: "/gallery/delegasi7.jpg",
-    alt: "",
+    alt: "Pertemuan rutin KSR PMI POLIJE",
   },
   {
     id: "r4",
@@ -118,7 +118,7 @@ const rightPhotos = [
     rotate: -8,
     shape: "shape-b",
     src: "/gallery/delupa.jpg",
-    alt: "",
+    alt: "Delegasi upacara HARDIKNAS POLIJE",
   },
   {
     id: "r5",
@@ -127,7 +127,7 @@ const rightPhotos = [
     rotate: -9,
     shape: "shape-a",
     src: "/gallery/delegasi8.jpg",
-    alt: "",
+    alt: "Dokumentasi seminar donor darah KSR PMI POLIJE",
   },
 ];
 

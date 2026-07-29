@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 // GANTI path di bawah dengan file pamflet asli kamu.
 // Taruh file-nya di public/gallery/ (atau folder public/ lain), contoh:
 // public/gallery/pamflet-open-recruitment.jpg
-const PAMFLET_SRC = "/gallery/pamflet.jpeg";
+const PAMFLET_SRC = "/gallery/pamflet.jpg";
 const PAMFLET_ALT = "Pamflet Open Recruitment KSR PMI Unit Polije";
 
 export default function Pamflet() {
